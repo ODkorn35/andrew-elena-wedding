@@ -1,0 +1,196 @@
+:root {
+--bg: #f9f7f4;
+--text: #2d2d2d;
+--accent: #c9a96e;
+--light: #e8e0d9;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', system-ui, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+min-height: 100vh;
+}
+
+.container {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 24px;
+}
+
+ <style>
+    :root {
+      --bg: #f9f7f4;
+      --text: #2d2d2d;
+      --accent: #c9a96e;
+      --light: #e8e0d9;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    header {
+      padding: 140px 0 100px;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4.5rem, 12vw, 9rem);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      margin-bottom: 0.2em;
+    }
+    .and {
+      font-size: 0.45em;
+      vertical-align: middle;
+      color: var(--accent);
+      margin: 0 0.3em;
+    }
+    .subtitle {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin: 1.5rem 0 3rem;
+      color: #555;
+    }
+    section {
+      padding: 100px 0;
+      text-align: center;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 1.8rem;
+      color: var(--text);
+    }
+    .time-big {
+      font-size: 4.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0.6em 0;
+      line-height: 1;
+    }
+    .time-small {
+      font-size: 1.5rem;
+      color: #666;
+      margin: 0.4em 0 1.2em;
+    }
+    .program-item {
+      margin: 3rem 0;
+    }
+    .program-item h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+    .highlight {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .dresscode {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4rem;
+      margin: 3rem 0;
+    }
+    .dress-item {
+      max-width: 320px;
+    }
+    .dress-item h4 {
+      font-size: 1.6rem;
+      margin: 1rem 0 0.8rem;
+    }
+    .form-section {
+      background: var(--light);
+      padding: 120px 0;
+    }
+    form {
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin: 1.4rem 0 0.5rem;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #d0c4b8;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: white;
+    }
+    .checkbox-group {
+      margin: 1.8rem 0;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      margin: 0.6rem 0;
+      font-weight: normal;
+    }
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 16px 40px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #b8975c;
+    }
+    .contacts {
+      margin: 4rem 0 2rem;
+      font-size: 1.1rem;
+    }
+    footer {
+      padding: 80px 0 40px;
+      text-align: center;
+      color: #777;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 640px) {
+      header { padding: 100px 0 80px; }
+      h1 { font-size: clamp(3.8rem, 10vw, 7rem); }
+      section { padding: 80px 0; }
+      h2 { font-size: 2.6rem; }
+      .time-big { font-size: 3.8rem; }
+      .dresscode { flex-direction: column; align-items: center; gap: 3rem; }
+    }
+  </style>
+
+@media (max-width: 640px) {
+header { padding: 100px 0 80px; }
+h1 { font-size: clamp(3.8rem, 10vw, 7rem); }
+section { padding: 80px 0; }
+h2 { font-size: 2.6rem; }
+.time-big { font-size: 3.8rem; }
+.dresscode { flex-direction: column; align-items: center; gap: 3rem; }
+}
