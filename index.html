@@ -1,66 +1,145 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Андрей & Елена — приглашение</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <!-- Шрифты (максимально близко к einvite) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <div class="page">
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero__content">
+    <div class="hero__overlay"></div>
+
+    <div class="hero-inner">
       <p class="hero__subtitle">Мы женимся</p>
       <h1 class="hero__title">Андрей & Елена</h1>
-      <p class="hero__date">26.06.2026</p>
+      <p class="hero__date">26 · 06 · 2026</p>
     </div>
   </section>
 
-  <!-- INVITATION TEXT -->
-  <section class="invitation">
+  <!-- INVITATION -->
+  <section class="invitation fade-in">
     <p>
-      Дорогие гости!  
-      Мы будем рады разделить с вами самый важный день нашей жизни.
+      Дорогие гости!<br>
+      Мы будем счастливы разделить с вами
+      самый важный день нашей жизни.
     </p>
   </section>
 
+  
+
+  <!-- Timer -->
+  <section class="countdown paper-edge bg-wine fade-in">
+
+  <h2 class="section-title">До свадьбы осталось</h2>
+  <div class="countdown__grid">
+    <div><span id="days">0</span><small>дней</small></div>
+    <div><span id="hours">0</span><small>часов</small></div>
+    <div><span id="minutes">0</span><small>минут</small></div>
+    <div><span id="seconds">0</span><small>секунд</small></div>
+  </div>
+  
+  <!-- Photo -->
+  </section>
+  <section class="image-divider fade-in">
+  <img src="images/decor/test.jpg" alt="">
+  </section>
+
+  <!-- Place -->
+  <section class="location fade-in">
+  <h2 class="section-title">Место проведения</h2>
+  <p class="location__name">Название площадки</p>
+  <p class="location__address">Город, адрес будет добавлен позже</p>
+  </section>
+  
   <!-- DETAILS -->
-  <section class="details">
-    <div class="details__item">
-      <h3>Дата</h3>
-      <p>26 июня 2026</p>
+  <section class="program paper-edge bg-wine fade-in">
+  <h2 class="section-title">Программа дня</h2>
+
+  <div class="program__item">
+    <span class="icon">🥂</span>
+    <div>
+      <span class="time">15:00</span>
+      <span class="event">Сбор гостей</span>
     </div>
-    <div class="details__item">
-      <h3>Формат</h3>
-      <p>Свадебное торжество</p>
+  </div>
+
+  <div class="program__item">
+    <span class="icon">💍</span>
+    <div>
+      <span class="time">16:00</span>
+      <span class="event">Церемония</span>
     </div>
+  </div>
+
+  <div class="program__item">
+    <span class="icon">🍽</span>
+    <div>
+      <span class="time">18:00</span>
+      <span class="event">Праздничный ужин</span>
+    </div>
+  </div>
+</section>
+
+  <!-- Map -->
+  <section class="map fade-in">
+  <iframe
+    src="https://maps.google.com/maps?q=Moscow&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    loading="lazy">
+  </iframe>
   </section>
 
+    
   <!-- RSVP -->
-  <section class="rsvp">
-    <h2>Подтвердите присутствие</h2>
+  <section class="rsvp paper-edge bg-green fade-in">
+  <h2 class="section-title">Ответ для молодожёнов</h2>
 
-    <form id="rsvpForm">
-      <input type="text" name="name" placeholder="Ваше имя" required>
+  <form id="rsvpForm" class="rsvp__form">
 
-      <select name="attendance" required>
-        <option value="">Вы сможете прийти?</option>
-        <option value="Да">Да, с удовольствием</option>
-        <option value="Нет">К сожалению, не смогу</option>
-      </select>
+    <input type="text" name="name" placeholder="Ваше имя" required>
 
-      <textarea name="comment" placeholder="Комментарий (по желанию)"></textarea>
+    <select name="attendance" required>
+      <option value="">Сможете ли вы присутствовать?</option>
+      <option value="Да">Да</option>
+      <option value="Нет">Нет</option>
+    </select>
 
-      <button type="submit">Отправить</button>
-    </form>
+    <fieldset class="checkbox-group">
+      <legend>Предпочтения по напиткам</legend>
 
-    <p id="formStatus" class="form-status"></p>
-  </section>
+      <label><input type="checkbox" name="alcohol" value="Вино белое"> Вино белое</label>
+      <label><input type="checkbox" name="alcohol" value="Вино красное"> Вино красное</label>
+      <label><input type="checkbox" name="alcohol" value="Шампанское"> Шампанское</label>
+      <label><input type="checkbox" name="alcohol" value="Виски"> Виски</label>
+      <label><input type="checkbox" name="alcohol" value="Коньяк"> Коньяк</label>
+      <label><input type="checkbox" name="alcohol" value="Безалкогольные"> Безалкогольные напитки</label>
+    </fieldset>
 
+    <textarea name="food_restrictions" placeholder="Что вы не употребляете из пищи?"></textarea>
+
+    <button type="submit">Отправить</button>
+  </form>
+
+  <p id="formStatus" class="form-status"></p>
+</section>
+
+
+  
+ 
+ 
   <script src="js/rsvp.js"></script>
+  </div>
+
 </body>
 </html>
-
