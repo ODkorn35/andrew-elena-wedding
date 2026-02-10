@@ -1,145 +1,356 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Андрей & Елена — приглашение</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
 
-  <!-- Шрифты (максимально близко к einvite) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+<script src="js/timer.js"></script>
+<script src="js/form.js"></script>
+<script src="js/slider.js"></script>
+
+
+
 <body>
-  <div class="page">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__overlay"></div>
+  <main class="page">
 
-    <div class="hero-inner">
-      <p class="hero__subtitle">Мы женимся</p>
-      <h1 class="hero__title">Андрей & Елена</h1>
-      <p class="hero__date">26 · 06 · 2026</p>
-    </div>
-  </section>
+    <!-- ==================================================
+         ГЛАВНЫЙ ЭКРАН / ПРИГЛАШЕНИЕ
+    ================================================== -->
+    <section class="hero section section-cream">
+      <div class="container">
+        <div class="hero-content">
 
-  <!-- INVITATION -->
-  <section class="invitation fade-in">
-    <p>
-      Дорогие гости!<br>
-      Мы будем счастливы разделить с вами
-      самый важный день нашей жизни.
-    </p>
-  </section>
+          <p class="hero-subtitle">
+            Дорогие родные и близкие!
+          </p>
 
-  
+          <h1 class="hero-title">
+            Андрей<br>
+            <span>&</span><br>
+            Елена
+          </h1>
 
-  <!-- Timer -->
-  <section class="countdown paper-edge bg-wine fade-in">
+          <p class="hero-text">
+            Приглашаем вас разделить с нами<br>
+            самый важный день нашей жизни
+          </p>
 
-  <h2 class="section-title">До свадьбы осталось</h2>
-  <div class="countdown__grid">
-    <div><span id="days">0</span><small>дней</small></div>
-    <div><span id="hours">0</span><small>часов</small></div>
-    <div><span id="minutes">0</span><small>минут</small></div>
-    <div><span id="seconds">0</span><small>секунд</small></div>
-  </div>
-  
-  <!-- Photo -->
-  </section>
-  <section class="image-divider fade-in">
-  <img src="images/decor/test.jpg" alt="">
-  </section>
+          <div class="hero-date">
+            26 · 06 · 2026
+          </div>
 
-  <!-- Place -->
-  <section class="location fade-in">
-  <h2 class="section-title">Место проведения</h2>
-  <p class="location__name">Название площадки</p>
-  <p class="location__address">Город, адрес будет добавлен позже</p>
-  </section>
-  
-  <!-- DETAILS -->
-  <section class="program paper-edge bg-wine fade-in">
-  <h2 class="section-title">Программа дня</h2>
+        </div>
+      </div>
+    </section>
 
-  <div class="program__item">
-    <span class="icon">🥂</span>
-    <div>
-      <span class="time">15:00</span>
-      <span class="event">Сбор гостей</span>
-    </div>
-  </div>
-
-  <div class="program__item">
-    <span class="icon">💍</span>
-    <div>
-      <span class="time">16:00</span>
-      <span class="event">Церемония</span>
-    </div>
-  </div>
-
-  <div class="program__item">
-    <span class="icon">🍽</span>
-    <div>
-      <span class="time">18:00</span>
-      <span class="event">Праздничный ужин</span>
-    </div>
-  </div>
-</section>
-
-  <!-- Map -->
-  <section class="map fade-in">
-  <iframe
-    src="https://maps.google.com/maps?q=Moscow&t=&z=13&ie=UTF8&iwloc=&output=embed"
-    loading="lazy">
-  </iframe>
-  </section>
-
-    
-  <!-- RSVP -->
-  <section class="rsvp paper-edge bg-green fade-in">
-  <h2 class="section-title">Ответ для молодожёнов</h2>
-
-  <form id="rsvpForm" class="rsvp__form">
-
-    <input type="text" name="name" placeholder="Ваше имя" required>
-
-    <select name="attendance" required>
-      <option value="">Сможете ли вы присутствовать?</option>
-      <option value="Да">Да</option>
-      <option value="Нет">Нет</option>
-    </select>
-
-    <fieldset class="checkbox-group">
-      <legend>Предпочтения по напиткам</legend>
-
-      <label><input type="checkbox" name="alcohol" value="Вино белое"> Вино белое</label>
-      <label><input type="checkbox" name="alcohol" value="Вино красное"> Вино красное</label>
-      <label><input type="checkbox" name="alcohol" value="Шампанское"> Шампанское</label>
-      <label><input type="checkbox" name="alcohol" value="Виски"> Виски</label>
-      <label><input type="checkbox" name="alcohol" value="Коньяк"> Коньяк</label>
-      <label><input type="checkbox" name="alcohol" value="Безалкогольные"> Безалкогольные напитки</label>
-    </fieldset>
-
-    <textarea name="food_restrictions" placeholder="Что вы не употребляете из пищи?"></textarea>
-
-    <button type="submit">Отправить</button>
-  </form>
-
-  <p id="formStatus" class="form-status"></p>
-</section>
-
-
-  
- 
- 
-  <script src="js/rsvp.js"></script>
-  </div>
+  </main>
 
 </body>
 </html>
+
+<!-- ==================================================
+     ДАТА И ОБРАТНЫЙ ОТСЧЁТ
+================================================== -->
+<section class="date section section-green">
+  <div class="container">
+    <div class="date-content">
+
+      <h2 class="date-title">
+        Мы будем рады видеть вас
+      </h2>
+
+      <div class="date-calendar">
+        <span class="date-day">26</span>
+        <span class="date-month">Июня</span>
+        <span class="date-year">2026</span>
+      </div>
+
+      <div class="timer" id="timer">
+        <div class="timer-item">
+          <span class="timer-value" id="days">00</span>
+          <span class="timer-label">дней</span>
+        </div>
+        <div class="timer-item">
+          <span class="timer-value" id="hours">00</span>
+          <span class="timer-label">часов</span>
+        </div>
+        <div class="timer-item">
+          <span class="timer-value" id="minutes">00</span>
+          <span class="timer-label">минут</span>
+        </div>
+        <div class="timer-item">
+          <span class="timer-value" id="seconds">00</span>
+          <span class="timer-label">секунд</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+     ПРОГРАММА ДНЯ
+================================================== -->
+<section class="program section section-wine">
+  <div class="container">
+    <div class="program-content">
+
+      <h2 class="program-title">Программа дня</h2>
+      <p class="program-subtitle">
+        Пятница, 26 июня
+      </p>
+
+      <ul class="program-list">
+
+        <li class="program-item">
+          <div class="program-icon">
+            <img src="images/icons/guests.svg" alt="">
+          </div>
+          <div class="program-info">
+            <span class="program-time">16:00</span>
+            <span class="program-text">Сбор гостей</span>
+          </div>
+        </li>
+
+        <li class="program-item">
+          <div class="program-icon">
+            <img src="images/icons/ceremony.svg" alt="">
+          </div>
+          <div class="program-info">
+            <span class="program-time">17:00</span>
+            <span class="program-text">Церемония</span>
+          </div>
+        </li>
+
+        <li class="program-item">
+          <div class="program-icon">
+            <img src="images/icons/dinner.svg" alt="">
+          </div>
+          <div class="program-info">
+            <span class="program-time">18:00</span>
+            <span class="program-text">Банкет</span>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+     ЛОКАЦИЯ
+================================================== -->
+<section class="location section section-green">
+  <div class="container">
+    <div class="location-content">
+
+      <h2 class="location-title">Место проведения</h2>
+
+      <a
+        href="https://yandex.ru/maps/-/CPQn5B-r"
+        target="_blank"
+        class="location-link"
+      >
+        Посмотреть на карте
+      </a>
+
+      <div class="location-slider">
+        <button class="slider-btn prev">‹</button>
+
+        <img
+          src="images/location/test1.jpg"
+          class="slider-image active"
+        >
+        <img
+          src="images/location/test2.jpg"
+          class="slider-image"
+        >
+
+        <button class="slider-btn next">›</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================================================
+     ДЕТАЛИ И ПОЖЕЛАНИЯ
+================================================== -->
+<section class="details section section-green">
+  <div class="container">
+    <div class="details-content">
+
+      <h2 class="details-title">
+        Немного деталей
+      </h2>
+
+      <div class="details-item">
+        <h3 class="details-item-title">Подарки</h3>
+        <p class="details-text">
+          Лучшим подарком для нас станет вклад в бюджет нашей молодой семьи.
+        </p>
+      </div>
+
+      <div class="details-item">
+        <h3 class="details-item-title">Цветы</h3>
+        <p class="details-text">
+          Мы будем благодарны, если вы воздержитесь от покупки букетов.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+     ДРЕСС-КОД
+================================================== -->
+<section class="dresscode section section-cream">
+  <div class="container">
+    <div class="dresscode-content">
+
+      <h2 class="dresscode-title">
+        Дресс-код
+      </h2>
+
+      <p class="dresscode-text">
+        Мы будем рады, если в своих образах вы поддержите
+        спокойную и элегантную атмосферу нашего дня.
+      </p>
+
+      <div class="dresscode-gallery">
+        <img src="images/dresscode/test.jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+     АНКЕТА ГОСТЯ / RSVP
+================================================== -->
+<section class="rsvp section section-cream">
+  <div class="container">
+    <div class="rsvp-content">
+
+      <h2 class="rsvp-title">
+        Анкета гостя
+      </h2>
+
+      <p class="rsvp-subtitle">
+        Подтвердите ваше присутствие<br>
+        до 1 августа 2025 г., это поможет нам в организации торжества
+      </p>
+
+      <form class="rsvp-form" id="rsvp-form">
+
+        <!-- Имя и Фамилия -->
+        <label class="rsvp-field">
+          <span>Имя и Фамилия</span>
+          <input type="text" name="fullname" required>
+        </label>
+
+        <!-- Присутствие -->
+        <fieldset class="rsvp-field">
+          <legend>Подтвердите присутствие на торжестве</legend>
+
+          <label>
+            <input type="radio" name="attendance" value="Смогу прийти" required>
+            Смогу прийти
+          </label>
+
+          <label>
+            <input type="radio" name="attendance" value="Не смогу прийти">
+            Не смогу прийти
+          </label>
+
+          <label>
+            <input type="radio" name="attendance" value="Сообщу позже">
+            Сообщу позже
+          </label>
+        </fieldset>
+
+        <!-- Аллергии -->
+        <label class="rsvp-field">
+          <span>Есть ли у вас аллергические реакции или ограничения по питанию?</span>
+          <textarea name="allergies" rows="3"></textarea>
+        </label>
+
+        <!-- Алкоголь / Напитки -->
+        <fieldset class="rsvp-field">
+          <legend>Предпочтения по напиткам</legend>
+
+          <label>
+            <input type="checkbox" name="drinks" value="Шампанское">
+            Шампанское
+          </label>
+
+          <label>
+            <input type="checkbox" name="drinks" value="Белое вино">
+            Белое вино
+          </label>
+
+          <label>
+            <input type="checkbox" name="drinks" value="Красное вино">
+            Красное вино
+          </label>
+
+          <label>
+            <input type="checkbox" name="drinks" value="Коньяк">
+            Коньяк
+          </label>
+
+          <label>
+            <input type="checkbox" name="drinks" value="Безалкогольные напитки">
+            Безалкогольные напитки
+          </label>
+        </fieldset>
+
+        <!-- Кнопка -->
+        <button type="submit" class="rsvp-button">
+          Отправить
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+<div class="rsvp-success" id="rsvp-success">
+  Спасибо!
+</div>
+
+<!-- ==================================================
+     ФИНАЛЬНЫЙ БЛОК
+================================================== -->
+<section class="final section section-cream">
+  <div class="container">
+    <div class="final-content">
+
+      <p class="final-text">
+        Будем счастливы разделить<br>
+        этот день вместе с вами
+      </p>
+
+      <h2 class="final-names">
+        Андрей & Елена
+      </h2>
+
+      <p class="final-date">
+        26 июня 2026
+      </p>
+
+      <div class="final-contacts">
+        <p>По всем вопросам:</p>
+        <a href="tel:+79990000000">Организатор — +7 999 000-00-00</a>
+      </div>
+
+    </div>
+  </div>
+</section>

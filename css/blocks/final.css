@@ -1,0 +1,46 @@
+/* ==================================================
+   ФИНАЛЬНЫЙ БЛОК
+================================================== */
+
+.final {
+  padding: 100px 0;
+  color: #000;
+  background: var(--color-cream);
+}
+
+
+.final-content {
+  text-align: center;
+}
+
+.final-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.final-names {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.final-date {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+.final-contacts {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.final-contacts a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #000;
+  text-decoration: none;
+}

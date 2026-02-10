@@ -1,0 +1,42 @@
+/* ==================================================
+   ГЛАВНЫЙ ЭКРАН / HERO
+================================================== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 400;
+  margin: 0 0 28px;
+}
+
+.hero-title span {
+  font-size: 32px;
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 36px;
+}
+
+.hero-date {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+}

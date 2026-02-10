@@ -1,0 +1,95 @@
+/* ==================================================
+   АНКЕТА ГОСТЯ / RSVP
+================================================== */
+
+.rsvp {
+  padding: 80px 0;
+  color: #000;
+}
+
+.rsvp-content {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rsvp-title {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.rsvp-subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.rsvp-form {
+  text-align: left;
+}
+
+.rsvp-field {
+  margin-bottom: 24px;
+}
+
+.rsvp-field span,
+.rsvp-field legend {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.rsvp-field input[type="text"],
+.rsvp-field textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  font-size: 14px;
+  color: #000;
+}
+
+.rsvp-field textarea {
+  resize: none;
+}
+
+.rsvp-field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.rsvp-field input[type="checkbox"],
+.rsvp-field input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* КНОПКА */
+.rsvp-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+
+  background: #6b1f2b; /* бордовый */
+  color: #fff;
+
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 13px;
+
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.rsvp-button:hover {
+  opacity: 0.85;
+}
+
+.rsvp-success {
+  display: none;
+  margin-top: 32px;
+  font-size: 22px;
+  text-align: center;
+}

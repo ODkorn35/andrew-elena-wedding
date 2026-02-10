@@ -1,0 +1,11 @@
+:root {
+  /* Цвета */
+  --color-cream: #f7f1df; /* Buttercream */
+  --color-green: #4f6f5e; /* Green Eyes */
+  --color-wine:  #5b1e2d; /* Cabernet */
+
+  --text-dark: #2b2b2b;
+
+  /* Геометрия */
+  --container-width: 420px;
+}
