@@ -1,0 +1,91 @@
+/* ==================================================
+   ЛОКАЦИЯ / МЕСТО ПРОВЕДЕНИЯ
+================================================== */
+
+.location {
+  padding: 80px 0;
+}
+
+.location-content {
+  text-align: center;
+}
+
+.location-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.location-name {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.location-address {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.location-button {
+  display: inline-block;
+  padding: 14px 28px;
+
+  background: var(--color-green);
+  color: #ffffff;
+
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-radius: 2px;
+}
+
+.location-slider {
+  position: relative;
+  margin-top: 32px;
+}
+
+.slider-image {
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+}
+
+.slider-image.active {
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.location-slider {
+  max-width: 320px;
+  margin: 32px auto 0;
+}
+
+.slider-image {
+  width: 100%;
+  border-radius: 8px;
+}

@@ -1,0 +1,37 @@
+/* ==================================================
+   ДЕТАЛИ И ПОЖЕЛАНИЯ
+================================================== */
+
+.details {
+  padding: 80px 0;
+}
+
+.details-content {
+  text-align: center;
+}
+
+.details-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+
+.details-item {
+  margin-bottom: 40px;
+}
+
+.details-item:last-child {
+  margin-bottom: 0;
+}
+
+.details-item-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.details-text {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}

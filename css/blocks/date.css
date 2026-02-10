@@ -1,0 +1,68 @@
+/* ==================================================
+   ДАТА И ОБРАТНЫЙ ОТСЧЁТ
+================================================== */
+
+.section-green {
+  background: var(--color-green);
+  color: #000000;
+}
+
+.date {
+  padding: 80px 0;
+}
+
+.date-content {
+  text-align: center;
+}
+
+.date-title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.date-calendar {
+  margin-bottom: 40px;
+}
+
+.date-day {
+  display: block;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.date-month {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  margin: 8px 0;
+}
+
+.date-year {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.timer-item {
+  flex: 1;
+}
+
+.timer-value {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.timer-label {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+}
