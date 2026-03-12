@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Свадебное приглашение</title>
+  <title>Андрей & Елена</title>
   <meta name="description" content="Приглашение на свадьбу" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="img/main.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
+
 <body>
   <div class="envelope-screen" id="envelope-screen">
     <div class="envelope" role="dialog" aria-modal="true" aria-labelledby="envelope-title">
@@ -44,11 +47,14 @@
   <main id="main" class="page">
     <div class="content-shell">
       <header class="hero">
-        <div class="container hero__inner">
-          <div class="hero__photo" aria-hidden="true"></div>
+        <div class="hero__top">
+          <div class="container hero__inner">
+            <img class="hero__photo" src="img/main.png" alt="Инициалы и имена Андрей и Елена" width="944" height="1088" loading="eager" decoding="async" />
+          </div>
+        </div>
+        <div class="container hero__inner hero__inner--content">
           <div class="hero__content">
-            <p class="overline">Дорогие родные и близкие!</p>
-            <h1 class="hero__title">Андрей и Елена</h1>
+            <p class="hero__text">Дорогие родные и близкие!</p>
             <p class="hero__text">Приглашаем вас на нашу свадьбу!</p>
           </div>
         </div>
@@ -140,7 +146,6 @@
     <section class="section program">
       <div class="container">
         <h2 class="section__title">Программа дня</h2>
-        <p class="section__subtitle">День первый</p>
         <p class="section__note">Пятница, 26 июня</p>
         <div class="timeline">
           <div class="timeline__item">
@@ -253,7 +258,7 @@
                   <path d="M18.5 13l.6 1.5 1.5.5-1.5.6-.6 1.5-.5-1.5-1.5-.6 1.5-.5.5-1.5z" fill="url(#sparkFill)"></path>
                 </svg>
               </span>
-              <div class="timeline__time">00:00</div>
+              <div class="timeline__time">23:00</div>
             </div>
             <div class="timeline__content">
               <h3>Финал</h3>
@@ -267,29 +272,31 @@
 
     <section class="section dress">
       <div class="container">
-        <h2 class="section__title">Дресс-код первого дня</h2>
+        <h2 class="section__title">Дресс-код</h2>
         <p class="section__lead">Нам важно создать особую атмосферу праздника, поэтому будем рады, если вы поддержите дресс-код вечера.</p>
         <div class="dress__tiers">
           <div class="dress__tier">
             <h3 class="dress__title">Девушки</h3>
-            <p class="dress__text">Просим вас избегать белого цвета, в этот день он только для невесты.</p>
+            <p class="dress__text">Просим вас избегать белого цвета, в этот день он только для невесты.
+              А также ярко красных оттенков и черного.
+            </p>
             <div class="palette">
-              <div class="palette__item" style="--swatch: #f2ede6">молочный</div>
-              <div class="palette__item" style="--swatch: #d9c7b8">песочный</div>
-              <div class="palette__item" style="--swatch: #b9a693">кофе</div>
-              <div class="palette__item" style="--swatch: #8f7e6f">какао</div>
-              <div class="palette__item" style="--swatch: #4b3f35">шоколад</div>
+              <a class="palette__item" style="--swatch: #7d956d" href="https://www.pantone.com/color-finder/16-0224-TCX" target="_blank" rel="noopener noreferrer">фисташковый</a>
+              <a class="palette__item" style="--swatch: #54392d" href="https://www.pantone.com/color-finder/19-1218-tcx"_blank" rel="noopener noreferrer">кофе</a>
+              <a class="palette__item" style="--swatch: #f5edd7" href="https://www.pantone.com/color-finder/11-0110-tcx" target="_blank" rel="noopener noreferrer">кремовый</a>
+              <p class="dress__lookbook-note">На цвета можно нажимать</p>
             </div>
           </div>
           <div class="dress__tier">
             <h3 class="dress__title">Мужчины</h3>
-            <p class="dress__text">Выбирайте костюмы с рубашкой или поло в предложенных оттенках.</p>
+            <p class="dress__text">Выбирайте костюмы с рубашкой или поло в предложенных оттенках.
+              Попросим избегать красного цвета и черного, чтобы не затмить жениха.
+            </p>
             <div class="palette">
-              <div class="palette__item" style="--swatch: #ffffff">белый</div>
-              <div class="palette__item" style="--swatch: #e6d2b6">песочный</div>
-              <div class="palette__item" style="--swatch: #8b4a2b">терракот</div>
-              <div class="palette__item" style="--swatch: #3c2a20">кофе</div>
-              <div class="palette__item" style="--swatch: #0f0f0f">черный</div>
+              <a class="palette__item" style="--swatch: #7d956d" href="https://www.pantone.com/color-finder/16-0224-TCX" target="_blank" rel="noopener noreferrer">фисташковый</a>
+              <a class="palette__item" style="--swatch: #54392d" href="https://www.pantone.com/color-finder/19-1218-tcx"_blank" rel="noopener noreferrer">кофе</a>
+              <a class="palette__item" style="--swatch: #f5edd7" href="https://www.pantone.com/color-finder/11-0110-tcx" target="_blank" rel="noopener noreferrer">кремовый</a>
+              <p class="dress__lookbook-note">На цвета можно нажимать</p>
             </div>
           </div>
         </div>
