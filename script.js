@@ -143,7 +143,7 @@ if (form) {
 
     if (!GAS_URL) {
       if (status) {
-        status.textContent = 'Добавьте ссылку на GAS веб-приложение в script.js.';
+        status.textContent = 'https://script.google.com/macros/s/AKfycbwi_zVRPZSPxNr3t05zCrT8BhY8b0QYoMtSeodrONf2SYt_dpfk94QzJjfGOh1A24RgsA/exec';
       }
       return;
     }
