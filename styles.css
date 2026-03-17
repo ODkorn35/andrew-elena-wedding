@@ -663,10 +663,12 @@ body {
 
 .palette {
   display: flex;
-  gap: 10px;
+  --palette-gap: 10px;
+  gap: var(--palette-gap);
   margin: 28px 0;
   align-items: stretch;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .palette__item {
@@ -684,7 +686,7 @@ body {
   place-items: center;
   text-decoration: none;
   cursor: pointer;
-  flex: 1 1 0;
+  flex: 0 1 calc((100% - (2 * var(--palette-gap))) / 3);
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -715,6 +717,10 @@ body {
   position: relative;
   width: 100%;
   margin: 6px 0 0;
+}
+
+.location__gallery {
+  margin-bottom: 28px;
 }
 
 .lookbook__display {
@@ -794,6 +800,55 @@ body {
   font-size: 20px;
   color: var(--muted);
   margin-top: 8px;
+}
+
+.contact__actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact__telegram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(44, 36, 31, 0.2);
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  touch-action: manipulation;
+}
+
+.contact__telegram:hover {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.contact__telegram:focus-visible {
+  outline: 2px solid rgba(44, 36, 31, 0.6);
+  outline-offset: 3px;
+}
+
+.contact__telegram-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__telegram svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 
 .rsvp {
@@ -956,7 +1011,7 @@ body {
   }
 
   .palette {
-    gap: 6px;
+    --palette-gap: 6px;
     margin: 20px 0;
   }
 

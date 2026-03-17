@@ -50,58 +50,61 @@ if (countdownRoot) {
   setInterval(updateCountdown, 1000);
 }
 
-const slider = document.querySelector('[data-slider]');
-if (slider) {
-  const display = slider.querySelector('.lookbook__display');
-  const prevBtn = slider.querySelector('.lookbook__nav--prev');
-  const nextBtn = slider.querySelector('.lookbook__nav--next');
-  const images = (slider.dataset.images || '').split('|').filter(Boolean);
-  let index = 0;
+const sliders = document.querySelectorAll('[data-slider]');
+if (sliders.length) {
+  sliders.forEach((slider) => {
+    const display = slider.querySelector('.lookbook__display');
+    const prevBtn = slider.querySelector('.lookbook__nav--prev');
+    const nextBtn = slider.querySelector('.lookbook__nav--next');
+    const images = (slider.dataset.images || '').split('|').filter(Boolean);
+    const label = slider.dataset.label || 'Фото';
+    let index = 0;
 
-  const showImage = (nextIndex) => {
-    if (!display || images.length === 0) return;
-    index = (nextIndex + images.length) % images.length;
-    display.style.backgroundImage = `url('${images[index]}')`;
-    display.setAttribute('aria-label', `Пример образа ${index + 1} из ${images.length}`);
-  };
+    const showImage = (nextIndex) => {
+      if (!display || images.length === 0) return;
+      index = (nextIndex + images.length) % images.length;
+      display.style.backgroundImage = `url('${images[index]}')`;
+      display.setAttribute('aria-label', `${label} ${index + 1} из ${images.length}`);
+    };
 
-  showImage(index);
+    showImage(index);
 
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => showImage(index - 1));
-  }
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => showImage(index + 1));
-  }
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => showImage(index - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => showImage(index + 1));
+    }
 
-  let startX = 0;
-  let startY = 0;
-  let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
 
-  if (display) {
-    display.addEventListener('touchstart', (event) => {
-      const touch = event.touches[0];
-      startX = touch.clientX;
-      startY = touch.clientY;
-      isDragging = true;
-    }, { passive: true });
+    if (display) {
+      display.addEventListener('touchstart', (event) => {
+        const touch = event.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        isDragging = true;
+      }, { passive: true });
 
-    display.addEventListener('touchend', (event) => {
-      if (!isDragging) return;
-      const touch = event.changedTouches[0];
-      const deltaX = touch.clientX - startX;
-      const deltaY = touch.clientY - startY;
-      isDragging = false;
+      display.addEventListener('touchend', (event) => {
+        if (!isDragging) return;
+        const touch = event.changedTouches[0];
+        const deltaX = touch.clientX - startX;
+        const deltaY = touch.clientY - startY;
+        isDragging = false;
 
-      if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
-        if (deltaX < 0) {
-          showImage(index + 1);
-        } else {
-          showImage(index - 1);
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (deltaX < 0) {
+            showImage(index + 1);
+          } else {
+            showImage(index - 1);
+          }
         }
-      }
-    });
-  }
+      });
+    }
+  });
 }
 
 const revealItems = document.querySelectorAll('.section, .hero');
