@@ -136,6 +136,64 @@ if (revealItems.length) {
 
 const form = document.querySelector('#rsvp-form');
 const status = document.querySelector('#form-status');
+const successModal = document.querySelector('#success-modal');
+const successModalCloseButton = successModal ? successModal.querySelector('.success-modal__btn') : null;
+let previousFocus = null;
+
+const closeSuccessModal = () => {
+  if (!successModal) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  successModal.classList.remove('is-open');
+  document.body.style.overflow = '';
+
+  const hideDelay = prefersReduced ? 0 : 280;
+  window.setTimeout(() => {
+    successModal.hidden = true;
+    successModal.setAttribute('aria-hidden', 'true');
+    if (previousFocus && typeof previousFocus.focus === 'function') {
+      previousFocus.focus();
+    }
+  }, hideDelay);
+};
+
+const openSuccessModal = () => {
+  if (!successModal || !successModalCloseButton) return;
+
+  previousFocus = document.activeElement;
+  successModal.hidden = false;
+  successModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+
+  window.requestAnimationFrame(() => {
+    successModal.classList.add('is-open');
+  });
+
+  successModalCloseButton.focus();
+};
+
+if (successModal) {
+  successModal.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (target.matches('[data-close-modal]')) {
+      closeSuccessModal();
+    }
+  });
+
+  successModal.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeSuccessModal();
+      return;
+    }
+
+    if (event.key !== 'Tab' || !successModalCloseButton) return;
+
+    event.preventDefault();
+    successModalCloseButton.focus();
+  });
+}
 
 if (form) {
   form.addEventListener('submit', async (event) => {
@@ -178,8 +236,9 @@ if (form) {
 
       form.reset();
       if (status) {
-        status.textContent = 'Спасибо! Мы получили ваш ответ.';
+        status.textContent = '';
       }
+      openSuccessModal();
     } catch (error) {
       if (status) {
         status.textContent = 'Не удалось отправить форму. Попробуйте позже.';
