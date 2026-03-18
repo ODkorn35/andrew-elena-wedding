@@ -1,4 +1,4 @@
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbwi_zVRPZSPxNr3t05zCrT8BhY8b0QYoMtSeodrONf2SYt_dpfk94QzJjfGOh1A24RgsA/exec';
+п»їconst GAS_URL = 'https://script.google.com/macros/s/AKfycbwi_zVRPZSPxNr3t05zCrT8BhY8b0QYoMtSeodrONf2SYt_dpfk94QzJjfGOh1A24RgsA/exec';
 
 const envelopeScreen = document.querySelector('#envelope-screen');
 const openBtn = document.querySelector('.open-btn');
@@ -57,14 +57,14 @@ if (sliders.length) {
     const prevBtn = slider.querySelector('.lookbook__nav--prev');
     const nextBtn = slider.querySelector('.lookbook__nav--next');
     const images = (slider.dataset.images || '').split('|').filter(Boolean);
-    const label = slider.dataset.label || 'Фото';
+    const label = slider.dataset.label || 'Р¤РѕС‚Рѕ';
     let index = 0;
 
     const showImage = (nextIndex) => {
       if (!display || images.length === 0) return;
       index = (nextIndex + images.length) % images.length;
       display.style.backgroundImage = `url('${images[index]}')`;
-      display.setAttribute('aria-label', `${label} ${index + 1} из ${images.length}`);
+      display.setAttribute('aria-label', `${label} ${index + 1} РёР· ${images.length}`);
     };
 
     showImage(index);
@@ -143,7 +143,7 @@ if (form) {
 
     if (!GAS_URL) {
       if (status) {
-        status.textContent = 'Добавьте ссылку на GAS веб-приложение в script.js.';
+        status.textContent = 'Р”РѕР±Р°РІСЊС‚Рµ СЃСЃС‹Р»РєСѓ РЅР° GAS РІРµР±-РїСЂРёР»РѕР¶РµРЅРёРµ РІ script.js.';
       }
       return;
     }
@@ -160,7 +160,7 @@ if (form) {
     });
 
     if (status) {
-      status.textContent = 'Отправляем...';
+      status.textContent = 'РћС‚РїСЂР°РІР»СЏРµРј...';
     }
 
     try {
@@ -173,18 +173,19 @@ if (form) {
       });
 
       if (!response.ok) {
-        throw new Error('Ошибка сети');
+        throw new Error('РћС€РёР±РєР° СЃРµС‚Рё');
       }
 
       form.reset();
       if (status) {
-        status.textContent = 'Спасибо! Мы получили ваш ответ.';
+        status.textContent = 'РЎРїР°СЃРёР±Рѕ! РњС‹ РїРѕР»СѓС‡РёР»Рё РІР°С€ РѕС‚РІРµС‚.';
       }
     } catch (error) {
       if (status) {
-        status.textContent = 'Не удалось отправить форму. Попробуйте позже.';
+        status.textContent = 'РќРµ СѓРґР°Р»РѕСЃСЊ РѕС‚РїСЂР°РІРёС‚СЊ С„РѕСЂРјСѓ. РџРѕРїСЂРѕР±СѓР№С‚Рµ РїРѕР·Р¶Рµ.';
       }
     }
   });
 }
+
 
