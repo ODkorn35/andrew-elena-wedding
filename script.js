@@ -56,14 +56,42 @@ if (sliders.length) {
     const display = slider.querySelector('.lookbook__display');
     const prevBtn = slider.querySelector('.lookbook__nav--prev');
     const nextBtn = slider.querySelector('.lookbook__nav--next');
-    const images = (slider.dataset.images || '').split('|').filter(Boolean);
+    const images = (slider.dataset.images || '').split('|').map((item) => item.trim()).filter(Boolean);
+    const positions = (slider.dataset.positions || '').split('|').map((item) => item.trim());
+    const fits = (slider.dataset.fits || '').split('|').map((item) => item.trim().toLowerCase());
     const label = slider.dataset.label || 'Фото';
+    let displayImage = null;
     let index = 0;
+
+    if (display) {
+      displayImage = display.querySelector('.lookbook__image');
+      if (!displayImage) {
+        displayImage = document.createElement('img');
+        displayImage.className = 'lookbook__image';
+        displayImage.alt = '';
+        displayImage.loading = 'lazy';
+        displayImage.decoding = 'async';
+        display.append(displayImage);
+      }
+    }
 
     const showImage = (nextIndex) => {
       if (!display || images.length === 0) return;
       index = (nextIndex + images.length) % images.length;
-      display.style.backgroundImage = `url('${images[index]}')`;
+      const imageUrl = encodeURI(images[index]);
+      const fitValue = fits[index];
+      const objectFit = fitValue === 'contain' || fitValue === 'cover' ? fitValue : 'cover';
+      const objectPosition = positions[index] || 'center center';
+      if (displayImage) {
+        displayImage.src = imageUrl;
+        displayImage.alt = `${label} ${index + 1} из ${images.length}`;
+        displayImage.style.objectFit = objectFit;
+        displayImage.style.objectPosition = objectPosition;
+      } else {
+        display.style.backgroundImage = `url('${imageUrl}')`;
+        display.style.backgroundSize = objectFit;
+        display.style.backgroundPosition = objectPosition;
+      }
       display.setAttribute('aria-label', `${label} ${index + 1} из ${images.length}`);
     };
 

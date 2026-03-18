@@ -725,13 +725,24 @@ body {
 
 .lookbook__display {
   width: 100%;
-  height: 780px;
+  height: 860px;
   border-radius: var(--radius);
+  overflow: hidden;
+  background-color: #e7dfd4;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid rgba(44, 36, 31, 0.1);
   box-shadow: var(--shadow);
   touch-action: pan-y;
+}
+
+.lookbook__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .lookbook__nav {
