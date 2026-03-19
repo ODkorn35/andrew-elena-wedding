@@ -661,6 +661,18 @@ body {
   color: var(--muted);
 }
 
+.dress__more-note {
+  margin: 20px 0 14px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.dress__more-btn {
+  margin-top: 0;
+}
+
 .palette {
   display: flex;
   --palette-gap: 10px;
@@ -1130,6 +1142,10 @@ body {
     font-size: 16px;
   }
 
+  .dress__more-note {
+    font-size: 12px;
+  }
+
   .lookbook__display {
     height: 520px;
   }
@@ -1162,7 +1178,6 @@ body {
     transform: none;
   }
 }
-
 
 
 
